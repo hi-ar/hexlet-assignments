@@ -13,13 +13,14 @@ swapKeyValue() — полиморфный метод, он может работ
  */
 // BEGIN
 class App {
-    public static void swapKeyValue(KeyValueStorage storage) {
+    public static KeyValueStorage swapKeyValue(KeyValueStorage storage) {
         Map<String, String> result = new HashMap<>();
 
         for (String key : storage.toMap().keySet()) {
             result.put(storage.get(key, "default"), key);
         }
         storage = new InMemoryKV(result);
+        return storage;
     }
 }
 // END
