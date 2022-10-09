@@ -5,22 +5,18 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-/*
-Создайте класс App с публичным статическим методом swapKeyValue().
-Метод принимает на вход объект базы данных и меняет в нём ключи и значения местами.
-swapKeyValue() — полиморфный метод, он может работать с любой реализацией базы данных,
-реализующей интерфейс KeyValueStorage.
- */
 // BEGIN
 class App {
-    public static KeyValueStorage swapKeyValue(KeyValueStorage storage) {
-        Map<String, String> result = new HashMap<>();
+    public static void swapKeyValue(KeyValueStorage storage) {
+        //KeyValueStorage result = new InMemoryKV(new HashMap<>()); //вар-1
+        Map<String, String> result = new HashMap<>(); //вар-2, создаю Map чтоб в конце
 
         for (String key : storage.toMap().keySet()) {
+            //result.set(storage.get(key, "default"), key);
             result.put(storage.get(key, "default"), key);
         }
+        //storage = result;
         storage = new InMemoryKV(result);
-        return storage;
     }
 }
 // END

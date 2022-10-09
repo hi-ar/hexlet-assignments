@@ -12,7 +12,7 @@ class AppTest {
         storage.set("1", "2"); //мапа добавить
         App.swapKeyValue(storage);
         System.out.println(storage.toMap()); // {A=B, 1=2}
-        System.out.println(App.swapKeyValue(storage).toMap()); // {B=A, 2=1}
+//        System.out.println(App.swapKeyValue(storage).toMap()); // {B=A, 2=1}
 
         assertThat(storage.get("3", "default")).isEqualTo("default"); //проходит
         assertThat(storage.get("B", "")).isEqualTo("A"); //нет, тк storage не поменялся
@@ -25,7 +25,7 @@ class AppTest {
         App.swapKeyValue(storage);
         Map<String, String> expected = Map.of("B", "A", "2", "1");
         System.out.println(storage.toMap()); // {A=B, 1=2}
-        System.out.println(App.swapKeyValue(storage).toMap()); // {B=A, 2=1}
+        //System.out.println(App.swapKeyValue(storage).toMap()); // {B=A, 2=1}
         assertThat(storage.toMap()).isEqualTo(expected); // нет, тк storage не поменялся
     }
 }
