@@ -14,9 +14,13 @@ class App {
         for (String key : storage.toMap().keySet()) {
             //result.set(storage.get(key, "default"), key);
             result.put(storage.get(key, "default"), key);
+            storage.unset(key);
+        }
+        for (String key : result.keySet()) {
+            storage.set(key, result.get(key));
         }
         //storage = result;
-        storage = new InMemoryKV(result);
+        //storage = new InMemoryKV(result);
     }
 }
 // END

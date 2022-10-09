@@ -39,5 +39,9 @@ class InMemoryKV implements KeyValueStorage {
     public Map<String, String> toMap() {
         return new HashMap<>(localData);
     }
+
+    public void clear() {
+        localData.clear();
+    }
 }
 // END
