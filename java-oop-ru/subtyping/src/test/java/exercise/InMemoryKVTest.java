@@ -14,33 +14,33 @@ class InMemoryKVTest {
         assertThat(storage.get("key2", "default")).isEqualTo("default");
         assertThat(storage.get("key", "default")).isEqualTo("10");
 
-        //storage.set("key2", "value2");
-        //storage.set("key", "value");
+        storage.set("key2", "value2");
+        storage.set("key", "value");
 
-//        assertThat(storage.get("key2", "default")).isEqualTo("value2");
-//        assertThat(storage.get("key", "default")).isEqualTo("value");
-//
+        assertThat(storage.get("key2", "default")).isEqualTo("value2");
+        assertThat(storage.get("key", "default")).isEqualTo("value");
+
         storage.unset("key");
         assertThat(storage.get("key", "def")).isEqualTo("def");
         assertThat(storage.toMap()).isEqualTo(Map.of("key2", "value2"));
 
     }
 
-    //@Test
-//    void mustBeImmutableTest() {
-//        Map<String, String> initial = new HashMap<>();
-//        initial.put("key", "10");
-//
-//        Map<String, String> clonedInitial = new HashMap<>();
-//        clonedInitial.putAll(initial);
-//
-//        KeyValueStorage storage = new InMemoryKV(initial);
-//
-//        initial.put("key2", "value2");
-//        assertThat(storage.toMap()).isEqualTo(clonedInitial);
-//
-//        Map<String, String> map = storage.toMap();
-//        map.put("key2", "value2");
-//        assertThat(storage.toMap()).isEqualTo(clonedInitial);
-//    }
+    @Test
+    void mustBeImmutableTest() {
+        Map<String, String> initial = new HashMap<>(); //initial key 10
+        initial.put("key", "10");
+
+        Map<String, String> clonedInitial = new HashMap<>(); //clonned key 10
+        clonedInitial.putAll(initial);
+
+        KeyValueStorage storage = new InMemoryKV(initial); //storage на initial (key 10)
+
+        initial.put("key2", "value2"); // initial {key-10, key2-value2}
+        assertThat(storage.toMap()).isEqualTo(clonedInitial);// storage не изменился после изм initial
+
+        Map<String, String> map = storage.toMap(); //это новая мапа {key 10}
+        map.put("key2", "value2"); //добавили в новую мапу стало {key-10, key2-value2}
+        assertThat(storage.toMap()).isEqualTo(clonedInitial); //{key 10} и {key 10}
+    }
 }

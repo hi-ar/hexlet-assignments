@@ -13,10 +13,11 @@ toMap() — возвращает базу данных в виде словар�
  */
 // BEGIN
 class InMemoryKV implements KeyValueStorage {
-    private Map<String, String> localData; //хранилище
+    private Map<String, String> localData = new HashMap<>(); //хранилище
 
     public InMemoryKV(Map<String, String> m) { //конструктор
-        localData = m;
+        //localData = new HashMap<>(m);
+        localData.putAll(m);
     }
 
     @Override
@@ -36,7 +37,7 @@ class InMemoryKV implements KeyValueStorage {
 
     @Override
     public Map<String, String> toMap() {
-        return null;
+        return new HashMap<>(localData);
     }
 }
 // END
