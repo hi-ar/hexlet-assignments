@@ -17,9 +17,8 @@ public class Disconnected implements Connection {
     }
 
     @Override
-    public Connection getCurrentState() {
-        System.out.println("Disconnected");
-        return tcpCon.getCurrentState();
+    public String getCurrentState() {
+        return "disconnected";
     }
 
     @Override

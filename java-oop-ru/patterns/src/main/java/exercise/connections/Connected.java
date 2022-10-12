@@ -6,7 +6,7 @@ import exercise.TcpConnection;
 public class Connected implements Connection {
     private TcpConnection tcpCon;
 
-    public Connected(TcpConnection tcp) {  //конструктор, при создании
+    public Connected(TcpConnection tcp) {
         this.tcpCon = tcp;
     }
 
@@ -16,9 +16,8 @@ public class Connected implements Connection {
     }
 
     @Override
-    public Connection getCurrentState() {
-        System.out.println("Connected");
-        return tcpCon.getCurrentState();
+    public String getCurrentState() {
+        return "connected";
     }
 
     @Override
