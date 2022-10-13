@@ -26,15 +26,20 @@ class PairedTag extends Tag {
         }
         result.append(">");
         result.append(body == null || body.equals("") ? "" : body);
-        if (!children.isEmpty()) {
-            for (Tag child : children) {
-                result.append(child.toString());
-            }
-        }
+
+//        if (!children.isEmpty()) {
+//            for (Tag child : children) {
+//                result.append(child.toString());
+//            }
+//        }
+
+        String tagsInLine = children.stream()
+                .map(tag -> tag.toString())
+                .collect(Collectors.joining());
+        result.append(tagsInLine);
+
         result.append("</" + tagName + ">");
-//        String r = children.stream()
-//                .map(tag -> result.append(tag.toString()).toString())
-//                .collect(Collectors.joining());
+
         return result.toString();
     }
 }
