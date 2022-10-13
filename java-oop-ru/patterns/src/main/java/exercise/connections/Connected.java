@@ -22,8 +22,7 @@ public class Connected implements Connection {
 
     @Override
     public void write(String data) {
-        System.out.println(tcpCon.getIpAddress() + ":" + tcpCon.getPort()
-                + " writing " + data);
+        tcpCon.addToBuffer(data);
     }
 
     @Override
