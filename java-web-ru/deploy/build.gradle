@@ -42,4 +42,13 @@ tasks.withType(JavaCompile) {
 // BEGIN
 task stage(dependsOn: ['clean', 'installDist'])
 installDist.mustRunAfter clean
+
+jar {
+  manifest {
+    attributes(
+      'Main-Class': 'exercise.App'
+    )
+  }
+  from { (configurations.runtime).collect { it.isDirectory() ? it : zipTree(it) } }
+}
 // END
