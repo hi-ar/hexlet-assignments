@@ -100,8 +100,8 @@ public class UsersServlet extends HttpServlet {
             }
         }
         out.write("</table><h1>Not found</h1></body></html>");
-        out.close();
         response.sendError(HttpServletResponse.SC_NOT_FOUND);
+        out.close();
         // END
     }
 }
