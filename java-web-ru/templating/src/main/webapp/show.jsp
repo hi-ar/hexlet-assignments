@@ -21,12 +21,7 @@
         </tr>
     </c:forEach>
     </table>
-    <!-- не понимаю как подставить user.get("id") пользователя в ссылку, варианты ниже не работают -->
-    <p><a href='/users/delete?id='>Delete</a></p>
+    <p><a href='/users/delete?id=${user.get("id")}'>Delete</a></p>
     <p><a href='/users'>Show all users</a></p>
     </body>
-
-<!-- <%= ${user.get("id")} %> -->
-<!-- <c:out value= "user"> ${user.get("id")} </c:out> -->
-<!-- <c:out value= "user.get("id")" /> -->
 </html>

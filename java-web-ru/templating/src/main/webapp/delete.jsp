@@ -1,7 +1,6 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!-- BEGIN -->
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,8 +12,10 @@
             crossorigin="anonymous">
     </head>
     <body>
-        <h1>Confirm delete user ${user}</h1>
-        <form method="post" action="url">
+    <div>
+        <p>Confirm delete user ${user.get("firstName")} ${user.get("lastName")}</p>
+    </div>
+        <form action='/users/delete?id=${user.get("id")}' method="post">
             <button type="submit" class="btn btn-danger">Удалить</button>
         </form>
     </body>
