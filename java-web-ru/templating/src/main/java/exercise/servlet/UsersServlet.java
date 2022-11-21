@@ -118,7 +118,7 @@ public class UsersServlet extends HttpServlet {
             return;
         }
         // BEGIN
-        request.setAttribute("id", id);  //здесь ошибка
+        request.setAttribute("user", user);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/delete.jsp");
         requestDispatcher.forward(request, response);
         // END

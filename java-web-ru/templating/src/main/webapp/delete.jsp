@@ -12,12 +12,12 @@
             crossorigin="anonymous">
     </head>
     <body>
-    <div>
-        <p>Confirm delete user ${user.get("firstName")} ${user.get("lastName")}</p>
-    </div>
-        <form action='/users/delete?id=${user.get("id")}' method="post">
-            <button type="submit" class="btn btn-danger">Удалить</button>
-        </form>
+        <div>
+         <p>Confirm delete user ${user.get("firstName")} ${user.get("lastName")}</p>
+         <form action='/users/delete?id=${user.get("id")}' method="post">
+         <button type="submit" class="btn btn-danger">Удалить</button>
+         </form>
+        <div>
     </body>
 </html>
 <!-- END -->
