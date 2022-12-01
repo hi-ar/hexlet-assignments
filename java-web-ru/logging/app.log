@@ -1,30 +1,28 @@
-дек. 01, 2022 8:59:07 PM org.apache.coyote.AbstractProtocol init
+дек. 01, 2022 11:03:50 PM org.apache.coyote.AbstractProtocol init
 INFO: Initializing ProtocolHandler ["http-nio-auto-1"]
-дек. 01, 2022 8:59:07 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+дек. 01, 2022 11:03:50 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
 INFO: Using a shared selector for servlet write/read
-дек. 01, 2022 8:59:07 PM org.apache.catalina.core.StandardService startInternal
+дек. 01, 2022 11:03:50 PM org.apache.catalina.core.StandardService startInternal
 INFO: Starting service [Tomcat]
-дек. 01, 2022 8:59:08 PM org.apache.catalina.core.StandardEngine startInternal
+дек. 01, 2022 11:03:50 PM org.apache.catalina.core.StandardEngine startInternal
 INFO: Starting Servlet engine: [Apache Tomcat/8.5.69]
-дек. 01, 2022 8:59:09 PM org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
-WARNING: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [144] milliseconds.
-дек. 01, 2022 8:59:09 PM org.apache.coyote.AbstractProtocol start
-INFO: Starting ProtocolHandler ["http-nio-auto-1-59444"]
-дек. 01, 2022 8:59:10 PM exercise.servlet.SessionServlet login
-INFO: lavern.keeling@gmail.com success login
-дек. 01, 2022 8:59:14 PM exercise.servlet.SessionServlet login
-INFO: lavern.keeling@gmail.com failure login
-дек. 01, 2022 8:59:14 PM exercise.servlet.SessionServlet login
-INFO: lavern.keeling@gmail.com success login
-дек. 01, 2022 8:59:14 PM exercise.servlet.SessionServlet login
-INFO: lavern.keeling@gmail.com success login
-дек. 01, 2022 8:59:14 PM org.apache.coyote.AbstractProtocol pause
-INFO: Pausing ProtocolHandler ["http-nio-auto-1-59444"]
-дек. 01, 2022 8:59:14 PM org.apache.catalina.core.StandardService stopInternal
+дек. 01, 2022 11:03:51 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-auto-1-65377"]
+дек. 01, 2022 11:03:55 PM exercise.servlet.SessionServlet login
+INFO: lavern.keeling@gmail.com anyway message
+дек. 01, 2022 11:03:55 PM exercise.servlet.SessionServlet login
+INFO: lavern.keeling@gmail.com anyway message
+дек. 01, 2022 11:03:56 PM exercise.servlet.SessionServlet login
+INFO: lavern.keeling@gmail.com anyway message
+дек. 01, 2022 11:03:56 PM exercise.servlet.SessionServlet login
+INFO: lavern.keeling@gmail.com anyway message
+дек. 01, 2022 11:03:56 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-auto-1-65377"]
+дек. 01, 2022 11:03:56 PM org.apache.catalina.core.StandardService stopInternal
 INFO: Stopping service [Tomcat]
-дек. 01, 2022 8:59:14 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesObjectStreamClassCaches
+дек. 01, 2022 11:03:56 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesObjectStreamClassCaches
 WARNING: When running on Java 9 or later you need to add "--add-opens=java.base/java.io=null" to the JVM command line arguments to enable ObjectStream cache memory leak protection. Alternatively, you can suppress this warning by disabling ObjectStream class cache memory leak protection.
-дек. 01, 2022 8:59:14 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesRmiTargets
+дек. 01, 2022 11:03:56 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesRmiTargets
 WARNING: When running on Java 9 or later you need to add "--add-opens=java.rmi/sun.rmi.transport=null" to the JVM command line arguments to enable RMI Target memory leak detection. Alternatively, you can suppress this warning by disabling RMI Target memory leak detection.
-дек. 01, 2022 8:59:14 PM org.apache.coyote.AbstractProtocol stop
-INFO: Stopping ProtocolHandler ["http-nio-auto-1-59444"]
+дек. 01, 2022 11:03:56 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-auto-1-65377"]

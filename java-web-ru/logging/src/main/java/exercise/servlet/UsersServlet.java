@@ -64,7 +64,7 @@ public class UsersServlet extends HttpServlet {
         String action = getAction(request);
 
         switch (action) {
-            case "new":
+            case "list": //new
                 createUser(request, response);
                 break;
             default:
@@ -103,19 +103,17 @@ public class UsersServlet extends HttpServlet {
         String email = request.getParameter("email");
 
         Map<String, String> user = users.build(firstName, lastName, email);
-        response.setStatus(HttpServletResponse.SC_OK);
 
         if (firstName.isEmpty() || lastName.isEmpty()) {
             request.setAttribute("user", user);
             session.setAttribute("flash", "Имя и Фамилия не могут быть пустыми");
+            response.setStatus(422);
             TemplateEngineUtil.render("users/new.html", request, response);
-            response.sendError(422);
             return;
         }
 
         users.add(user);
         session.setAttribute("flash", "Пользователь успешно создан");
         response.sendRedirect("/users");
-        response.setStatus(HttpServletResponse.SC_OK);
     }
 }

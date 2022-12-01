@@ -9,7 +9,7 @@ layout:decorate="~{layouts/application.html}">
 
   <!-- BEGIN -->
   <h1>Регистрация</h1>
-  <form action="/users/new" method="post" th:object="${user}">
+  <form action="/users/list" method="post" th:object="${user}">
     <div class="mb-3">
       <label>Имя</label>
       <input class="form-control" type="text" name="firstName" th:value="*{firstName}">

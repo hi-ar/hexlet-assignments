@@ -76,13 +76,15 @@ public class SessionServlet extends HttpServlet {
 
         Map<String, String> user = users.findByEmail(email);
 
+        LOGGER.log(Level.INFO, email + " anyway message");
+
         if (user == null || !user.get("password").equals(password)) {
             request.setAttribute("user", userData);
             session.setAttribute("flash", "Неверные логин или пароль");
             response.setStatus(422);
             TemplateEngineUtil.render("session/login.html", request, response);
             // BEGIN
-            LOGGER.log(Level.INFO, email + " failure login");
+            //LOGGER.log(Level.INFO, email + " failure login");
             // END
             return;
         }
@@ -91,8 +93,8 @@ public class SessionServlet extends HttpServlet {
         session.setAttribute("flash", "Вы успешно вошли");
         response.sendRedirect("/");
         // BEGIN
-        LOGGER.log(Level.INFO, email + " success login");
-        response.setStatus(200);
+        //LOGGER.log(Level.INFO, email + " success login");
+        //response.setStatus(200);
         // END
     }
 
