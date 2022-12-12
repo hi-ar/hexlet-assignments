@@ -19,7 +19,7 @@ public final class App {
 
         // BEGIN допишите 5 марш для CRUD user
         app.routes(() -> {
-           crud("users/{id}", new UserController());
+           crud("/api/v1/users/{id}", new UserController());
         });
         // END
     }
