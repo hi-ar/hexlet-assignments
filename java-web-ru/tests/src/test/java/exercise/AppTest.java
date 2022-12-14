@@ -22,7 +22,17 @@ class AppTest {
     private static String baseUrl;
 
     // BEGIN
-    
+    @BeforeAll
+    public static void beforeAll(){
+        app = App.getApp();
+        app.start();
+        int port = app.port();
+        baseUrl = "http://localhost:" + port;
+    }
+    @AfterAll
+    public static void afterAll() {
+        app.stop();
+    }
     // END
 
     // Между тестами база данных очищается
@@ -62,6 +72,26 @@ class AppTest {
     }
 
     // BEGIN
-    
+    @Test
+    void createUser() {
+    String first = "Tirion";
+    String last = "Lannister";
+    String email = "tirion@lannister.com";
+    String password = "123456";
+
+    HttpResponse<String> response = Unirest
+            .post(baseUrl + "/users")
+            .field("firstName", first)
+            .field("lastName", last)
+            .field("email", email)
+            .field("password", password)
+            .asString();
+
+    assertThat(response.getStatus()).isEqualTo(302);
+    User expected = new QUser().lastName.contains("Lannister").findOne();
+
+    assertThat(expected).isNotNull();
+    assertThat(expected.getEmail()).isEqualTo("tirion@lannister.com");
+    }
     // END
 }
