@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed3a596f-4c1a-46bf-8628-94809e60e9a9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../java-oop-ru/code-generation/src/main/java/exercise/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-oop-ru/code-generation/src/main/java/exercise/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-oop-ru/errors/src/main/java/exercise/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-oop-ru/errors/src/main/java/exercise/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-oop-ru/reflections/src/main/java/exercise/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-oop-ru/reflections/src/main/java/exercise/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../migrations/hexlet.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../migrations/hexlet.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../migrations/hexlet.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/../migrations/hexlet.trace.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-web-ru/javalin/hexlet.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-web-ru/javalin/hexlet.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-web-ru/javalin/src/main/resources/templates/layouts/application.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-web-ru/javalin/src/main/resources/templates/layouts/application.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-web-ru/jdbc/hexlet.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-web-ru/jdbc/hexlet.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-web-ru/logging/src/main/java/exercise/servlet/SessionServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-web-ru/logging/src/main/java/exercise/servlet/SessionServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-web-ru/orm/hexlet.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-web-ru/orm/hexlet.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-web-ru/rest-api/src/test/java/exercise/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-web-ru/rest-api/src/test/java/exercise/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-web-ru/session/src/main/java/exercise/servlet/SessionServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-web-ru/session/src/main/java/exercise/servlet/SessionServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-web-ru/templating/src/main/java/exercise/servlet/UsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-web-ru/templating/src/main/java/exercise/servlet/UsersServlet.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-orm" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-orm" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-orm" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="liquibase" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-orm" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="8797dbb4-eaeb-442f-b25d-aef7ca052c5a" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MHGTIAEe3qDjE0flGlplQwRluG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "R:/IT development/lvl1",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
+  <component name="RunManager" selected="Gradle.spring-orm [check]">
+    <configuration name="spring-orm [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="check" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="spring-orm [diffChangeLog]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="diffChangeLog" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="generate-migrations" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="generate-migrations" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.spring-orm [check]" />
+        <item itemvalue="Gradle.spring-orm [diffChangeLog]" />
+        <item itemvalue="Makefile Target.generate-migrations" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\User 2\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed3a596f-4c1a-46bf-8628-94809e60e9a9" name="Changes" comment="" />
+      <created>1677417107019</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677417107019</updated>
+    </task>
+    <servers />
+  </component>
+</project>
