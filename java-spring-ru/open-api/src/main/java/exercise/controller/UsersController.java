@@ -42,20 +42,20 @@ public class UsersController {
     // Контейнер для аннотаций @ApiResponse
     // Используется в случае, если нужно указать более одного ответа
     @ApiResponses(value = {
-        // Указываем, что операция вернет ответ с кодом 200 в случае успешного выполнения
-        @ApiResponse(responseCode = "200", description = "User found"),
-        // И ответ с кодом 404 в случе, если пользователь не найден
-        @ApiResponse(responseCode = "404", description = "User with that id not found")
+            // Указываем, что операция вернет ответ с кодом 200 в случае успешного выполнения
+            @ApiResponse(responseCode = "200", description = "User found"),
+            // И ответ с кодом 404 в случе, если пользователь не найден
+            @ApiResponse(responseCode = "404", description = "User with that id not found")
     })
     @GetMapping(path = "/{id}")
     public User getUser(
-        // Аннотация отмечает параметр метода, как параметр для операции
-        // И определяет его описание
-        @Parameter(description = "Id of user to be found")
-        @PathVariable long id) {
+            // Аннотация отмечает параметр метода, как параметр для операции
+            // И определяет его описание
+            @Parameter(description = "Id of user to be found")
+            @PathVariable long id) {
 
         return this.userRepository.findById(id)
-            .orElseThrow(() -> new UserNotFoundException(id));
+                .orElseThrow(() -> new UserNotFoundException(id));
     }
 
     @Operation(summary = "Create new user")
@@ -63,20 +63,20 @@ public class UsersController {
     @PostMapping(path = "")
     @ResponseStatus(HttpStatus.CREATED)
     public User createUser(
-        @Parameter(description = "User data to save")
-        @RequestBody User user) {
+            @Parameter(description = "User data to save")
+            @RequestBody User user) {
         return userRepository.save(user);
     }
 
     @Operation(summary = "Delete user by his id")
     @ApiResponses(value = {
-        @ApiResponse(responseCode = "200", description = "User deleted"),
-        @ApiResponse(responseCode = "404", description = "User with that id not found")
+            @ApiResponse(responseCode = "200", description = "User deleted"),
+            @ApiResponse(responseCode = "404", description = "User with that id not found")
     })
     @DeleteMapping(path = "/{id}")
     public void deleteUser(
-        @Parameter(description = "Id of user to be deleted")
-        @PathVariable long id) {
+            @Parameter(description = "Id of user to be deleted")
+            @PathVariable long id) {
         // Проверяем, существует ли пользователь с таким id
         if (!userRepository.existsById(id)) {
             // Если не существует, возвращаем код ответа 404
@@ -86,22 +86,25 @@ public class UsersController {
     }
 
     // BEGIN
-    @Operation(summary = "Modifies user")
+    @Operation(summary = "Update existing user")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "User modified"),
+            @ApiResponse(responseCode = "200", description = "User updated"),
             @ApiResponse(responseCode = "404", description = "User with that id not found")
     })
-    @PatchMapping ("/{id}")
-    public void modifyUser(@PathVariable long id,
-                           @Parameter(description = "Id of user to be modified")
-                           @RequestBody User user) {
-        if (userRepository.existsById(id)) {
-            this.userRepository.findById(id).orElseThrow().setFirstName(user.getFirstName());
-            this.userRepository.findById(id).orElseThrow().setLastName(user.getLastName());
-            this.userRepository.findById(id).orElseThrow().setEmail(user.getEmail());
-            return;
+    @PatchMapping(path = "/{id}")
+    public User updateUser(
+            @Parameter(description = "Id of user to be updated")
+            @PathVariable long id,
+            @Parameter(description = "User data to update")
+            @RequestBody User user) {
+
+        if (!userRepository.existsById(id)) {
+            throw new UserNotFoundException(id);
         }
-        throw new UserNotFoundException(id);
+
+        user.setId(id);
+
+        return userRepository.save(user);
     }
     // END
 }
