@@ -65,7 +65,7 @@ public class CustomBeanPostProcessor implements BeanPostProcessor {
                         );
                         logger.info(msg); //выполняем задание - пишем лог
                         //контекст вызывал бин кальк (который проксировали) это его ответ
-                        return 1234; //sum?a=8&b=7 записывается в лог и возвращает 1234
+//                        return 1234; //sum?a=8&b=7 записывается в лог и возвращает 1234
                         return method.invoke(bean, args); //вызываем кальк и пересылаем его ответ (15)
                     }
             );
