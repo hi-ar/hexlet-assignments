@@ -18,36 +18,26 @@ import exercise.Data;
 
 // BEGIN
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api")
 public class PostsController {
 
-    @GetMapping("/{userId}/posts")
+    private List<Post> posts = Data.getPosts(); //вопрос ментору: почему если добавлять напрямую в Data.get() не добавляются?
+
+    private List<Post> eqPosts = posts;
+    private List<Post> posts2 = Data.getPosts();
+
+    @GetMapping("/users/{userId}/posts")
     ResponseEntity<List<Post>> showAllByUser(@PathVariable int userId) {
-        System.out.println("requested posts of id: " + userId);
-        List<Post> thisUserPosts = Data.getPosts().stream().filter(p -> p.getUserId() == userId).toList();
-        System.out.println(thisUserPosts.toString());
+        List<Post> thisUserPosts = posts.stream().filter(p -> p.getUserId() == userId).toList();
         return ResponseEntity.ok().body(thisUserPosts);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/{userId}/posts")
-    Post create(@PathVariable int userId, @RequestBody Post newPost){
-        System.out.println("List first cont nums of entry: )" + Data.getPosts().size());
-        Post toAdd = new Post();
-        toAdd.setUserId(userId);
-        toAdd.setSlug(newPost.getSlug());
-        toAdd.setTitle(newPost.getTitle());
-        toAdd.setBody(newPost.getBody());
-
-        newPost.setUserId(userId); //remove
-        System.out.println("§§§§§§§§§ newPost:" + newPost.getUserId() + " / " + newPost.getSlug() + " / " + newPost.getTitle() + " / " + newPost.getBody());
-        System.out.println("§§§§§§§§§§§ toAdd:" + toAdd.getUserId() + " / " + toAdd.getSlug() + " / " + toAdd.getTitle() + " / " + toAdd.getBody());
-
-        Data.getPosts().add(toAdd);
-        System.out.println(Data.getPosts().add(toAdd));
-
-        System.out.println("List now cont nums of entry: )" + Data.getPosts().size());
-        return toAdd;
+    @PostMapping("/users/{userId}/posts")
+    Post create(@PathVariable int userId, @RequestBody Post newPost) {
+        newPost.setUserId(userId);
+        posts.add(newPost);
+        return newPost;
     }
 }
 // END
