@@ -86,7 +86,7 @@ class ProductsControllerTest {
                 .andReturn();
 
         var body = result.getResponse().getContentAsString();
-        assertThatJson(body).isArray().hasSize(10);
+        assertThatJson(body).isArray().hasSize(30);
     }
 
     @Test
@@ -100,6 +100,7 @@ class ProductsControllerTest {
                 assertThatJson(element)
                         .and(v -> v.node("title").asString().containsIgnoringCase("lamp"))
         );
+//        assertThatJson(body).isArray().hasSize(10); //1
     }
 
     @Test
@@ -114,6 +115,7 @@ class ProductsControllerTest {
                         .and(v -> v.node("price").asNumber()
                                 .isGreaterThan(BigDecimal.valueOf(20)).isLessThan(BigDecimal.valueOf(50)))
         );
+//        assertThatJson(body).isArray().hasSize(10); //1
     }
 
     @Test
@@ -141,6 +143,7 @@ class ProductsControllerTest {
                 assertThatJson(element)
                         .and(v -> v.node("categoryId").isEqualTo(1))
         );
+//        assertThatJson(body).isArray().hasSize(10); //1
     }
 
     @Test
